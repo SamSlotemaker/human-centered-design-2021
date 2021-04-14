@@ -16,6 +16,8 @@ a {
 
 .cursor {
     position: absolute;
+    opacity: .8;
+    mix-blend-mode: difference;
     top: 0;
     left: 0;
     width: 50px;
