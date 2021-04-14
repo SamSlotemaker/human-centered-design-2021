@@ -10,6 +10,13 @@ body {
     letter-spacing: 0.1em;
 }
 
+.back-button {
+    position: absolute;
+    right: 1em;
+    padding: 1em;
+    background-color: red;
+}
+
 a {
     color: white;
 }
