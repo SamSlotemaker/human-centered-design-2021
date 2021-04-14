@@ -30,3 +30,7 @@ Dingen om te proberen zijn:
 * Geluid afspelen zodat er wellicht nieteens naar het scherm gekeken hoeft te worden
 * Elementen aan de zijkant positioneren, om het zoveel mogelijk gebruik te maken van Roger zijn restvisus. 
 
+De volledige uitwerking van mijn eerste idee kun je [hier](https://github.com/SamSlotemaker/human-centered-design-2021/wiki/Uitwerken-concept) vinden. 
+
+![Schermopname (155)](https://user-images.githubusercontent.com/60625329/114717419-4fa56900-9d35-11eb-9f37-399c4de3f888.png)
+
