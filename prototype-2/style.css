@@ -1,0 +1,16 @@
+body {
+    background-color: black;
+    color: white;
+}
+
+a {
+    color: white;
+}
+
+table {
+    margin-bottom: 5rem;
+}
+
+tr {
+    margin: 1em;
+}
