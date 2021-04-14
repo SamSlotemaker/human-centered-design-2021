@@ -18,6 +18,6 @@ async function getData(url) {
 // getData(API_URL).then(data => {
 //     console.log(data)
 // })
-window.onload = function () {
+window.onclick = function () {
     dryAudio.play()
 }
