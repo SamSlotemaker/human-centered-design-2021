@@ -1,9 +1,10 @@
 const API_KEY = 'a17a85a0327a026d6ccffda6769b4782'
 const CITY = 'heiloo'
 const API_URL = `http://api.openweathermap.org/data/2.5/forecast?id=524901&appid=${API_KEY}`
-const cursor = document.querySelector('.cursor')
 const timeElement = document.querySelector('.tijd p')
-console.log(cursor);
+var msg = new SpeechSynthesisUtterance();
+msg.lang = 'nl'
+
 
 
 var rainAudio = new Audio('./sounds/rain1.mp3')
@@ -26,11 +27,26 @@ async function getData(url) {
 //     dryAudio.play()
 // }
 
-document.addEventListener('keydown', logKey);
 
 let time = 40
+speak(time)
 timeElement.textContent = time + ' Minuten'
 
+function handleScroll(e) {
+    if (e.deltaY > 0) {
+        if (time > 0) {
+            time -= 10;
+        }
+        speak(time)
+        timeElement.textContent = time + ' Minuten'
+        changeWeather(time)
+    } else {
+        time += 10;
+        speak(time)
+        timeElement.textContent = time + ' Minuten'
+        changeWeather(time)
+    }
+}
 
 function logKey(e) {
     switch (e.code) {
@@ -38,11 +54,13 @@ function logKey(e) {
             if (time > 0) {
                 time -= 10;
             }
+            speak(time)
             timeElement.textContent = time + ' Minuten'
             changeWeather(time)
             break;
         case 'ArrowRight':
             time += 10;
+            speak(time)
             timeElement.textContent = time + ' Minuten'
             changeWeather(time)
             break;
@@ -63,3 +81,18 @@ function changeWeather(time) {
 
     }
 }
+
+function speak(textMessage) {
+    window.speechSynthesis.cancel();
+    if (time % 60 == 0) {
+        let hours = time / 60
+        msg.text = hours + 'uur'
+    } else {
+        msg.text = textMessage + "minuten";
+    }
+
+    window.speechSynthesis.speak(msg);
+}
+
+document.addEventListener('keydown', logKey);
+document.addEventListener('wheel', handleScroll)
