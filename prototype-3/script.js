@@ -30,7 +30,7 @@ async function getData(url) {
 
 let time = 40
 speak(time)
-timeElement.textContent = time + ' Minuten'
+changeElement(time)
 
 function handleScroll(e) {
     if (e.deltaY > 0) {
@@ -38,12 +38,13 @@ function handleScroll(e) {
             time -= 10;
         }
         speak(time)
-        timeElement.textContent = time + ' Minuten'
+        changeElement(time)
         changeWeather(time)
     } else {
         time += 10;
         speak(time)
-        timeElement.textContent = time + ' Minuten'
+        changeElement(time)
+
         changeWeather(time)
     }
 }
@@ -55,13 +56,14 @@ function logKey(e) {
                 time -= 10;
             }
             speak(time)
-            timeElement.textContent = time + ' Minuten'
+            changeElement(time)
             changeWeather(time)
             break;
         case 'ArrowRight':
             time += 10;
             speak(time)
-            timeElement.textContent = time + ' Minuten'
+            changeElement(time)
+
             changeWeather(time)
             break;
         default:
@@ -82,11 +84,28 @@ function changeWeather(time) {
     }
 }
 
+function changeElement(time) {
+    if (time % 60 == 0) {
+        let hours = time / 60
+        timeElement.textContent = hours + ' uur'
+    } else if (time > 60) {
+        let hours = Math.floor(time / 60)
+        let minutes = time % 60
+        timeElement.textContent = hours + ' uur en ' + minutes + ' minuten'
+    } else {
+        timeElement.textContent = time + ' minuten'
+    }
+}
+
 function speak(textMessage) {
     window.speechSynthesis.cancel();
     if (time % 60 == 0) {
         let hours = time / 60
         msg.text = hours + 'uur'
+    } else if (time > 60) {
+        let hours = Math.floor(time / 60)
+        let minutes = time % 60
+        msg.text = hours + 'uur en ' + minutes + 'minuten'
     } else {
         msg.text = textMessage + "minuten";
     }
