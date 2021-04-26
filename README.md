@@ -43,7 +43,108 @@ Ik heb geprobeerd de applicatie zo simpel mogelijk te houden en gericht om 1 spe
 
 De applicatie maakt gebruik van kleur en geluid als feedback, waarbij het geluid volledig los staat van zijn screenreader. Navigeren door de applicatie (het veranderen van tijd) kan Roger doen met zijn muiswiel. Bij iedere verandering wordt de nieuwe waarde opgelezen, waardoor er zo min mogelijk naar het scherm gekeken hoeft te worden. Wanneer het zou gaan regenen wordt het scherm rood, maar zal er ook regengeluid klinken op de achtergrond.
 
+Op deze manier kan Roger in een paar seconden checken of dit het juiste moment is om te gaan hardlopen.
 
+### Realisatie 
+
+Ophalen van regendata uit api
+
+
+#### aantal droge minuten
+uit de api kan ik een array halen die per minuut aangeeft of het gaat regenen, zo kan ik het aantal droge minuten zoeken. 
+
+```js
+//returns how many minutes it will stay dry
+function findMinutes(array) {
+    //return array index when there will be rain
+    let dryMinutes = 61
+    array.forEach((item, index) => {
+        if (item.precipitation > 0) {
+            dryMinutes = index
+        }
+    })
+    return dryMinutes;
+}
+```
+
+#### Weersverandering
+Het weergeluid en de achtergrond worden met de changeWeather functie getriggerd.
+```js
+//handle weather change
+function changeWeather(time) {
+    if (time > dryMinutes) {
+        document.body.classList.add('rain')
+        rainAudio.play()
+        dryAudio.pause();
+    } else {
+        document.body.classList.remove('rain')
+        dryAudio.play()
+        rainAudio.pause();
+
+    }
+}
+```
+
+De spraak wordt getriggerd in de Speak functie, eerst wordt alles dat momenteel uitgesproken wordt gecancelt en wordt er een nieuwe tekst uitgesproken die is meegegeven.
+
+```js
+//handles speachtext
+function speak(textMessage) {
+    window.speechSynthesis.cancel();
+    if (time % 60 == 0) {
+        let hours = time / 60
+        msg.text = hours + 'uur'
+    } else if (time > 60) {
+        let hours = Math.floor(time / 60)
+        let minutes = time % 60
+        msg.text = hours + 'uur en ' + minutes + 'minuten'
+    } else {
+        msg.text = textMessage + "minuten";
+    }
+    window.speechSynthesis.speak(msg);
+}
+```
+
+#### Aantal minuten
+het aantal minuten gebeurt in de changeElement functie. De functie is iets uitgebreid door alles boven de 60 minuten om te zetten naar een Uur Minuten format.
+```js
+//change the time element
+function changeElement(time) {
+    if (time % 60 == 0) {
+        let hours = time / 60
+        timeElement.textContent = hours + ' uur'
+    } else if (time > 60) {
+        let hours = Math.floor(time / 60)
+        let minutes = time % 60
+        timeElement.textContent = hours + ' uur en ' + minutes + ' minuten'
+    } else {
+        timeElement.textContent = time + ' minuten'
+    }
+}
+```
+
+#### Scrollevent
+Het aanpassen van de tijd met het scrollwiel kan ik doen door te kijken welke kant er op gescrolld wordt. Ook wordt de spraakfunctie getriggert zodat de verandering wordt opgelezen.
+```js
+//called when user scrolls with scrollwheel
+function handleScroll(e) {
+    if (e.deltaY > 0) {
+        if (time > 0) {
+            time -= 1;
+        }
+        speak(time)
+        changeElement(time)
+        changeWeather(time)
+    } else {
+        if (time < 60) {
+            time += 1;
+        }
+        speak(time)
+        changeElement(time)
+        changeWeather(time)
+    }
+}
+```
 
 ## :exclamation: Belangrijkste test informatie 
 ### Test 1 
