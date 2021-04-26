@@ -94,11 +94,11 @@ function findMinutes(array) {
     return dryMinutes;
 }
 
-
 let time = 40
 speak(time)
 changeElement(time)
 
+//called when user scrolls with scrollwheel
 function handleScroll(e) {
     if (e.deltaY > 0) {
         if (time > 0) {
@@ -117,6 +117,7 @@ function handleScroll(e) {
     }
 }
 
+//called on keypress
 function logKey(e) {
     switch (e.code) {
         case 'ArrowLeft':
@@ -139,6 +140,7 @@ function logKey(e) {
     }
 }
 
+//handle weather change
 function changeWeather(time) {
     if (time > dryMinutes) {
         document.body.classList.add('rain')
@@ -152,6 +154,7 @@ function changeWeather(time) {
     }
 }
 
+//change the time element
 function changeElement(time) {
     if (time % 60 == 0) {
         let hours = time / 60
@@ -165,6 +168,7 @@ function changeElement(time) {
     }
 }
 
+//handles speachtext
 function speak(textMessage) {
     window.speechSynthesis.cancel();
     if (time % 60 == 0) {
@@ -183,6 +187,7 @@ function speak(textMessage) {
 
 document.addEventListener('wheel', handleScroll)
 
+//get data from API
 async function getData(url) {
     const response = await fetch(url)
     const data = await response.json()

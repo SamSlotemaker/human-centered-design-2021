@@ -1,12 +1,58 @@
 # Human Centered Design
 
-## test 1 
+[LIVE LINK](https://samslotemaker.github.io/human-centered-design-2021/concept)
 
-### Prototype
+## :clipboard:Beschrijving
+Deze applicatie ontwikkel ik speciaal voor Roger Ravelli. De applicatie zal speciaal voor hem alleen gemaakt worden en zal in de loop van de weken 3 keer getest worden, zodat hij voor Roger zo goed mogelijk werkt. Het is de bedoeling dat ik rekening hou met de beperkingen die Roger met zich meedraagt en de applicatie hierop aanpas.
+
+## :man: Over roger
+Roger is een slechtziende man, die langzamerhand steeds blinder wordt. Hij houdt van beeldhouden, lezen, hardlopen en is kort geleden arbeidsongeschikt verklaard. Roger kan nog gebruikmaken van zijn restvisus maar dit is erg vermoeiend voor hem. 
+
+### :question:Belangrijkste bevindingen
+Onderstaande bevinden en details komen uit de tests die ik met Roger gedaan heb, die onderaan samengevat worden en [hier](https://github.com/SamSlotemaker/human-centered-design-2021/wiki) in detail beschreven worden.
+
+* Roger ziet links meer dan rechts
+* Roger wordt verblind door de felle witte kleuren op websites
+* Roger valt gauw terug op zijn zicht
+* Roger gebruikt zijn muis nog steeds het meest
+* Roger heeft de sreenreader nog niet volledig onder controle en deze werkt hem vaak tegen. 
+* Roger is niet volledig blind
+* Supernova neemt bepaalde schermfuncties over (zoals toetsaanslagen)
+
+### :computer: Technische details
+* Roger gebruikt supernova als screenreader op windows
+* Roger gebruikt de voorleesfunctie van de iPhone 11 
+* Roger heeft een braillelezer maar beheert deze niet volledig
+* Roger is ongeveer 250% ingezoomd in zijn browser
+
+## :bulb: Belangrijkste aanknopingspunten voor de applicatie
+Naar aanleiding van de bovenstaante bevindingen heb ik een aantal punten waar ik mijn concept ten alle tijden op zal testen
+
+* Gebruik een darktheme (geen witte achtergrond)
+* Positioneer elementen links op het scherm
+* Wees niet afhankelijk van de screenreader
+* Maak de applicatie niet te ingewikkeld
+* Ga er vanuit dat Roger niet door de applicatie heen zal lopen zoals deze bedoeld is
+* Hou rekening dat de site responsive is naar aanleiding van het inzoomen
+* Zorg er voor dat Roger zo min mogelijk zijn ogen hoeft te focussen
+* Geef Roger opties zodat hij niet vast zit aan 1 oplossing. 
+
+## :pencil: Concept
+Omdat Roger van hardlopen houdt, heb ik een applicatie ontwikkeld die hem verteld of het droogblijft binnen de tijd van zijn hardloop rondje. 
+Ik heb geprobeerd de applicatie zo simpel mogelijk te houden en gericht om 1 specifieke taak.
+
+De applicatie maakt gebruik van kleur en geluid als feedback, waarbij het geluid volledig los staat van zijn screenreader. Navigeren door de applicatie (het veranderen van tijd) kan Roger doen met zijn muiswiel. Bij iedere verandering wordt de nieuwe waarde opgelezen, waardoor er zo min mogelijk naar het scherm gekeken hoeft te worden. Wanneer het zou gaan regenen wordt het scherm rood, maar zal er ook regengeluid klinken op de achtergrond.
+
+
+
+## :exclamation: Belangrijkste test informatie 
+### Test 1 
+
+#### Prototype
 https://samslotemaker.github.io/human-centered-design-2021/table-prototype1/
 
 
-### Belangrijkste Testresultaten
+#### Belangrijkste Testresultaten
 Het uitgebreide testverslag kun je [hier]() vinden.
 Vandaag hebben we getest met Roger, Roger was duidelijk aangeslagen over wat hem overkomt en het lijkt er op dat Roger nog niet volledig wil overstappen op de hulpmiddelen die er beschikbaar zijn voor hem, bepaalde inzichten hierin waren:
 * Roger probeert de website nog steeds met zicht te scannen
@@ -20,7 +66,7 @@ Het is voor mij zaak om iets te ontwikkelen waar Roger daadwerkelijk iets aan he
 - Roger heeft een marathon gelopen en loopt dus hard
 - Roger maakt ook veel gebruik van zijn telefoon (iOS)
 
-### Eerste idee concept
+#### Eerste idee concept
 Allereerst leek het mij een goed idee om grafieken/tabellen toegankelijk te maken voor Roger, echter vertelde hij dat hij sinds enkele weken officieel werk ongeschikt is verklaard, dus ik denk dat dit niet genoeg toegevoegde waarde zou leveren in zijn toekomstige levensloop. Daarom kwam ik op hetvolgende: 
 
 Een website die aangeeft of het droogblijft, wanneer Roger zou willen hardlopen. De applicatie zal in ieder geval het volgende moeten bevatten om testbaar te zijn wanneer we Roger weer ontmoeten:
@@ -37,12 +83,12 @@ De volledige uitwerking van mijn eerste idee kun je [hier](https://github.com/Sa
 ![Schermopname (155)](https://user-images.githubusercontent.com/60625329/114717419-4fa56900-9d35-11eb-9f37-399c4de3f888.png)
 
 
-## test 2
+### Test 2
 
-### Prototype
+#### Prototype
 https://samslotemaker.github.io/human-centered-design-2021/prototype-2/
 
-### Belangrijkste Testresultaten
+#### Belangrijkste Testresultaten
 Wegens ziekte heeft Inju de tweede test in mijn plaats afgenomen, erg veel dank naar Inju hiervoor. Inju heeft mijn prototype met Roger doorlopen om bepaalde inzichten te verkrijgen en heeft hierbij sterk doorgevraagd naar bepaalde zaken. Inju heeft precies die punten aangekaart die ook in mijn hoofd opkwamen, de belangrijkste inzichten hieruit zijn: 
 
 * Tekst valt buitenbeeld door inzoomen van browser (na vergelijken lijkt dit een zoom van 200% te zijn).
@@ -51,7 +97,7 @@ Wegens ziekte heeft Inju de tweede test in mijn plaats afgenomen, erg veel dank 
 * Belangrijkste elementen moeten links geplaatst worden, Roger zijn linker oog is aanzienlijk beter dan zijn rechter oog (vrijwel niets).
 * Roger geeft aan voor alsnog zo min mogelijk met zijn ogen te doen, omdat dit erg vermoeiend is.
 
-### Aankopingspunten
+#### Aankopingspunten
 Uit deze feedback haal ik belangrijke aanknopingspunten die mijn concept zouden kunnen verbeteren, enkele punten zouden zijn:
 * Ontwerp met een 200% ingezoomde browser, ik wil rekening gaan houden met 100% tot 300% zicht, zodat hierin nog gewisseld kan worden (zo niet perongeluk)
 * Het geluid wordt nu enkel afgespeeld op klik, dit kan niet anders omdat javascript geen geluid mag afspelen zonder dat er interactie met een pagina heeft plaatsgevonden (om spam te voorkomen). Echter, wellicht is dit nu wel mogelijk omdat ik een introductie scherm toon waar op geklikt dient te worden.
@@ -61,3 +107,21 @@ Uit deze feedback haal ik belangrijke aanknopingspunten die mijn concept zouden 
    * Niet te specifiek
    * Wellicht toesenbord bedienbaar aan en uit zetten
 * Geef de mogelijkheid om de pagina voor te laten lezen, misschien is dit prettiger dat de screenreader.
+
+### Test 3
+
+In de derde test wil ik vooral testen of het automatisch oplezen van veranderende elementen juist werkt en prettig is, of het navigeren doormiddel van de scrollbar goed werkt en of geluidsfeedback de juiste feedback is.
+
+#### Prototype
+https://samslotemaker.github.io/human-centered-design-2021/prototype-3/
+
+
+#### Belangrijkste Testresultaten
+* Rechterkant wordt niet goed gezien, elementen moeten echt in 1 gebied van de pagina geplaatst worden dus.
+* Spraak kan goed werken, maar is lastig om in 1 keer goed te doen zonder zeer duidelijke instructie.
+* Screenreader blokkeert toetscombinaties
+
+#### Aankopingspunten
+De test was erg positief, wat fijn is voor een laatste test. Ik weet nu dat de elementen waar ik mij op heb gefocust werken en dat ik hier op kan voortbouwen. 
+Ik wil voor het eindproduct in iedergeval zorgen dat de applicatie werkt (koppelen van een werkende API) en ik hoop dat ik hem nog kan uitbreiden naar mobiel, omdat dit voor Roger een stuk praktischer zou zijn. 
+
