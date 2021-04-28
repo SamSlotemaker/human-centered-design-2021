@@ -3,6 +3,7 @@ const CITY = 'heiloo'
 const LAT = '52.36508986732812'
 const LON = '4.866084348096675'
 const API_URL = `https://api.openweathermap.org/data/2.5/onecall?lat=${LAT}&lon=${LON}&appid=${API_KEY}`
+const placeButton = document.querySelector('.place-button')
 
 const testArray = [{ dt: 1619102580, precipitation: 0 }
     , { dt: 1619102640, precipitation: 0 }
@@ -173,16 +174,19 @@ function changeElement(time) {
 
 //handles speachtext
 function speak(textMessage) {
-    window.speechSynthesis.cancel();
-    if (time % 60 == 0) {
-        let hours = time / 60
-        msg.text = hours + 'uur'
-    } else if (time > 60) {
-        let hours = Math.floor(time / 60)
-        let minutes = time % 60
-        msg.text = hours + 'uur en ' + minutes + 'minuten'
-    } else {
-        msg.text = textMessage + "minuten";
+    window.speechSynthesis.cancel()
+    msg.text = textMessage
+    if (typeof textMessage == 'number') {
+        if (time % 60 == 0) {
+            let hours = time / 60
+            msg.text = hours + 'uur'
+        } else if (time > 60) {
+            let hours = Math.floor(time / 60)
+            let minutes = time % 60
+            msg.text = hours + 'uur en ' + minutes + 'minuten'
+        } else {
+            msg.text = textMessage + "minuten";
+        }
     }
 
     window.speechSynthesis.speak(msg);
@@ -217,3 +221,21 @@ function handleTimeScroll(e) {
 }
 
 main.addEventListener("scroll", handleTimeScroll)
+
+var myRecognition = new webkitSpeechRecognition();
+myRecognition.lang = 'nl';
+const place = document.querySelector('#place')
+const weatherQuestion = document.querySelector('h1')
+
+function handlePlaceButton() {
+    myRecognition.start();
+    console.log('Ready to receive a color command.');
+}
+
+myRecognition.onresult = function (e) {
+    place.textContent = e.results[0][0].transcript
+
+    speak(weatherQuestion.textContent)
+}
+
+placeButton.addEventListener('click', handlePlaceButton)

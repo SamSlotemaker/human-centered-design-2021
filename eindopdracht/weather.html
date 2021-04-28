@@ -7,17 +7,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
-    <script src="mobile.js" defer></script>
     <title>Blijf ik droog?</title>
 </head>
 
 <body>
     <header>
-        <h1>Blijft het droog?</h1>
+        <h1>Blijft het droog in <span id="place">Amsterdam</span>?</h1>
+        <h2>Klik op het scherm om een nieuwe plaats in te spreken</h2>
+        <div class="sun">
+            <span></span><span></span><span></span><span></span><span></span>
+        </div>
+        <div class="thunder">
+            <span></span><span></span><span></span><span></span>
+        </div>
     </header>
 
     <main>
         <section class="tijd">
+            <button type="button" class="place-button">klik hier om een nieuwe plaats te kiezen </button>
             <div>
                 <h2>aankomende:</h2>
                 <p></p>

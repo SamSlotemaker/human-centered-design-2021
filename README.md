@@ -210,7 +210,7 @@ Uit deze feedback haal ik belangrijke aanknopingspunten die mijn concept zouden 
 * Geef de mogelijkheid om de pagina voor te laten lezen, misschien is dit prettiger dat de screenreader.
 
 ### Test 3
-
+![Schermopname (160)](https://user-images.githubusercontent.com/60625329/116458594-1efd1d80-a865-11eb-9790-3bd0bce993db.png)
 In de derde test wil ik vooral testen of het automatisch oplezen van veranderende elementen juist werkt en prettig is, of het navigeren doormiddel van de scrollbar goed werkt en of geluidsfeedback de juiste feedback is.
 
 #### Prototype
