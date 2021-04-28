@@ -266,3 +266,5 @@ https://samslotemaker.github.io/human-centered-design-2021/prototype-3/
 De test was erg positief, wat fijn is voor een laatste test. Ik weet nu dat de elementen waar ik mij op heb gefocust werken en dat ik hier op kan voortbouwen. 
 Ik wil voor het eindproduct in iedergeval zorgen dat de applicatie werkt (koppelen van een werkende API) en ik hoop dat ik hem nog kan uitbreiden naar mobiel, omdat dit voor Roger een stuk praktischer zou zijn. 
 
+Daarnaast wil ik hem nog iets uitbreiden zodat Roger van plaats kan wisselen (Amsterdam blijft de 'smart default') en ik wil nog enkele vormen toevoegen die de applicatie net iets minder serieus maken.
+
