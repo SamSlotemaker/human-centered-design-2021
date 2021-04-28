@@ -188,7 +188,7 @@ placeButton.addEventListener('click', handlePlaceButton)
 ```
 
 ## :exclamation: Belangrijkste test informatie 
-### Test 1 
+### :one: Test 1 
 
 ![Schermopname (161)](https://user-images.githubusercontent.com/60625329/116458927-7a2f1000-a865-11eb-890c-441ca1880b7a.png)
 #### Prototype
@@ -223,7 +223,7 @@ Dingen om te proberen zijn:
 
 De volledige uitwerking van mijn eerste idee kun je [hier](https://github.com/SamSlotemaker/human-centered-design-2021/wiki/Uitwerken-concept) vinden. 
 
-### Test 2
+### :two:Test 2
 
 ![Schermopname (155)](https://user-images.githubusercontent.com/60625329/114717419-4fa56900-9d35-11eb-9f37-399c4de3f888.png)
 #### Prototype
@@ -249,7 +249,7 @@ Uit deze feedback haal ik belangrijke aanknopingspunten die mijn concept zouden 
    * Wellicht toesenbord bedienbaar aan en uit zetten
 * Geef de mogelijkheid om de pagina voor te laten lezen, misschien is dit prettiger dat de screenreader.
 
-### Test 3
+### :three:Test 3
 ![Schermopname (160)](https://user-images.githubusercontent.com/60625329/116458594-1efd1d80-a865-11eb-9790-3bd0bce993db.png)
 In de derde test wil ik vooral testen of het automatisch oplezen van veranderende elementen juist werkt en prettig is, of het navigeren doormiddel van de scrollbar goed werkt en of geluidsfeedback de juiste feedback is.
 
