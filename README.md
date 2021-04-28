@@ -45,12 +45,30 @@ De applicatie maakt gebruik van kleur en geluid als feedback, waarbij het geluid
 
 Op deze manier kan Roger in een paar seconden checken of dit het juiste moment is om te gaan hardlopen.
 
+![Schermopname (162)](https://user-images.githubusercontent.com/60625329/116460243-21f90d80-a867-11eb-9e61-4c9048a91d95.png)
+![Schermopname (163)](https://user-images.githubusercontent.com/60625329/116460246-2291a400-a867-11eb-9b94-090a7b066c20.png)
+
+
 ### Realisatie 
 
-Ophalen van regendata uit api
+#### Ophalen van regendata uit api
+```js
+//get data from API
+async function getData(url) {
+    const response = await fetch(url)
+    const data = await response.json()
+    return data
+}
+```
 
+```js
+const API_URL = `https://api.openweathermap.org/data/2.5/onecall?lat=${LAT}&lon=${LON}&appid=${API_KEY}`
+getData(API_URL).then(data => {
+    //...logic
+}
+```
 
-#### aantal droge minuten
+#### Aantal droge minuten
 uit de api kan ik een array halen die per minuut aangeeft of het gaat regenen, zo kan ik het aantal droge minuten zoeken. 
 
 ```js
@@ -146,9 +164,33 @@ function handleScroll(e) {
 }
 ```
 
+#### Speech recognition
+Ik gebruik speech recognition zodat roger geen plaatsnaam hoeft in te typen of te zoeken in een lijst, zodat hij zijn ogen niet hoeft te gebruiken.
+
+```js
+var myRecognition = new webkitSpeechRecognition();
+myRecognition.lang = 'nl';
+const place = document.querySelector('#place')
+const weatherQuestion = document.querySelector('h1')
+
+function handlePlaceButton() {
+    myRecognition.start();
+    console.log('Ready to receive a color command.');
+}
+
+myRecognition.onresult = function (e) {
+    place.textContent = e.results[0][0].transcript
+
+    speak(weatherQuestion.textContent)
+}
+
+placeButton.addEventListener('click', handlePlaceButton)
+```
+
 ## :exclamation: Belangrijkste test informatie 
 ### Test 1 
 
+![Schermopname (161)](https://user-images.githubusercontent.com/60625329/116458927-7a2f1000-a865-11eb-890c-441ca1880b7a.png)
 #### Prototype
 https://samslotemaker.github.io/human-centered-design-2021/table-prototype1/
 
@@ -181,11 +223,9 @@ Dingen om te proberen zijn:
 
 De volledige uitwerking van mijn eerste idee kun je [hier](https://github.com/SamSlotemaker/human-centered-design-2021/wiki/Uitwerken-concept) vinden. 
 
-![Schermopname (155)](https://user-images.githubusercontent.com/60625329/114717419-4fa56900-9d35-11eb-9f37-399c4de3f888.png)
-
-
 ### Test 2
 
+![Schermopname (155)](https://user-images.githubusercontent.com/60625329/114717419-4fa56900-9d35-11eb-9f37-399c4de3f888.png)
 #### Prototype
 https://samslotemaker.github.io/human-centered-design-2021/prototype-2/
 
