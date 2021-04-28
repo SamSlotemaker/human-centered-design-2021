@@ -209,7 +209,7 @@ if (screen.width < 400) {
 function handleTimeScroll(e) {
     let totalSrollHeight = main.scrollHeight - main.offsetHeight
     let totalMinutes = 60
-    let interval = totalSrollHeight / 60
+    let interval = totalSrollHeight / totalMinutes
     let time = Math.floor(main.scrollTop / interval)
     speak(time)
     changeElement(time)
@@ -217,3 +217,14 @@ function handleTimeScroll(e) {
 }
 
 main.addEventListener("scroll", handleTimeScroll)
+
+document.body.addEventListener('touchstart', function () {
+    if (audiosWeWantToUnlock) {
+        for (let audio of audiosWeWantToUnlock) {
+            audio.play()
+            audio.pause()
+            audio.currentTime = 0
+        }
+        audiosWeWantToUnlock = null
+    }
+}, false)
