@@ -5,15 +5,16 @@
 ## :memo:Table of Contents
 * [Beschrijving](https://github.com/SamSlotemaker/human-centered-design-2021#clipboardbeschrijving)
 * [Over roger](https://github.com/SamSlotemaker/human-centered-design-2021#man-over-roger)
-   * [Belangijkste bevindingen](https://github.com/SamSlotemaker/human-centered-design-2021#exclamation-belangrijkste-test-informatie)
+   * [Belangijkste bevindingen](https://github.com/SamSlotemaker/human-centered-design-2021#questionbelangrijkste-bevindingen)
    * [Technische details](https://github.com/SamSlotemaker/human-centered-design-2021#computer-technische-details)
    * [Belangrijkste aanknopingspunten voor de applicatie](https://github.com/SamSlotemaker/human-centered-design-2021#bulb-belangrijkste-aanknopingspunten-voor-de-applicatie)
 * [Concept](https://github.com/SamSlotemaker/human-centered-design-2021#pencil-concept)
-   * [Realisatie](https://github.com/SamSlotemaker/human-centered-design-2021#:hammer:realisatie)
+   * [Realisatie](https://github.com/SamSlotemaker/human-centered-design-2021#hammerrealisatie)
 * [Belangrijkste testinformatie](https://github.com/SamSlotemaker/human-centered-design-2021#exclamation-belangrijkste-test-informatie)
    * [Test 1](https://github.com/SamSlotemaker/human-centered-design-2021#one-test-1)
    * [Test 2](https://github.com/SamSlotemaker/human-centered-design-2021#twotest-2)
    * [Test 3](https://github.com/SamSlotemaker/human-centered-design-2021#threetest-3)
+* [Credits](https://github.com/SamSlotemaker/human-centered-design-2021#credits)
 
 ## :clipboard:Beschrijving
 Deze applicatie ontwikkel ik speciaal voor Roger Ravelli. De applicatie zal speciaal voor hem alleen gemaakt worden en zal in de loop van de weken 3 keer getest worden, zodat hij voor Roger zo goed mogelijk werkt. Het is de bedoeling dat ik rekening hou met de beperkingen die Roger met zich meedraagt en de applicatie hierop aanpas.
@@ -201,6 +202,8 @@ placeButton.addEventListener('click', handlePlaceButton)
 ```
 
 ## :exclamation: Belangrijkste test informatie 
+De resultaten van de testen kun je hier vinden, in totaal is er 3 keer getest.
+
 ### :one: Test 1 
 
 ![Schermopname (161)](https://user-images.githubusercontent.com/60625329/116458927-7a2f1000-a865-11eb-890c-441ca1880b7a.png)
@@ -281,3 +284,7 @@ Ik wil voor het eindproduct in iedergeval zorgen dat de applicatie werkt (koppel
 
 Daarnaast wil ik hem nog iets uitbreiden zodat Roger van plaats kan wisselen (Amsterdam blijft de 'smart default') en ik wil nog enkele vormen toevoegen die de applicatie net iets minder serieus maken.
 
+## Credits
+* [Roger Ravelli (testpersoon)](http://www.rogerravelli.com/)
+* [Vasilis van Gemert (docent)](https://vasilis.nl/)
+* [Leonie Smits (docent/assistent)](https://github.com/leoniesmits)
