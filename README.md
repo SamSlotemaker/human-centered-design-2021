@@ -2,6 +2,19 @@
 
 [LIVE LINK](https://samslotemaker.github.io/human-centered-design-2021/concept)
 
+## :memo:Table of Contents
+* [Beschrijving](https://github.com/SamSlotemaker/human-centered-design-2021#clipboardbeschrijving)
+* [Over roger](https://github.com/SamSlotemaker/human-centered-design-2021#man-over-roger)
+   * [Belangijkste bevindingen](https://github.com/SamSlotemaker/human-centered-design-2021#exclamation-belangrijkste-test-informatie)
+   * [Technische details](https://github.com/SamSlotemaker/human-centered-design-2021#computer-technische-details)
+   * [Belangrijkste aanknopingspunten voor de applicatie](https://github.com/SamSlotemaker/human-centered-design-2021#bulb-belangrijkste-aanknopingspunten-voor-de-applicatie)
+* [Concept](https://github.com/SamSlotemaker/human-centered-design-2021#pencil-concept)
+   * [Realisatie](https://github.com/SamSlotemaker/human-centered-design-2021#:hammer:realisatie)
+* [Belangrijkste testinformatie](https://github.com/SamSlotemaker/human-centered-design-2021#exclamation-belangrijkste-test-informatie)
+   * [Test 1](https://github.com/SamSlotemaker/human-centered-design-2021#one-test-1)
+   * [Test 2](https://github.com/SamSlotemaker/human-centered-design-2021#twotest-2)
+   * [Test 3](https://github.com/SamSlotemaker/human-centered-design-2021#threetest-3)
+
 ## :clipboard:Beschrijving
 Deze applicatie ontwikkel ik speciaal voor Roger Ravelli. De applicatie zal speciaal voor hem alleen gemaakt worden en zal in de loop van de weken 3 keer getest worden, zodat hij voor Roger zo goed mogelijk werkt. Het is de bedoeling dat ik rekening hou met de beperkingen die Roger met zich meedraagt en de applicatie hierop aanpas.
 
@@ -49,7 +62,7 @@ Op deze manier kan Roger in een paar seconden checken of dit het juiste moment i
 ![Schermopname (163)](https://user-images.githubusercontent.com/60625329/116460246-2291a400-a867-11eb-9b94-090a7b066c20.png)
 
 
-### Realisatie 
+### :hammer:Realisatie 
 
 #### Ophalen van regendata uit api
 ```js
