@@ -1,0 +1,116 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(0, 66, 0);
+    color: white;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 0.1em;
+    font-size: clamp(.3rem, 5vw, 1rem);
+}
+
+body.rain {
+    background-color: rgb(83, 0, 0);
+}
+
+.full-page-link {
+    display: block;
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+}
+
+.full-page-link h1 {
+    margin-top: 3em;
+    margin-left: 1rem;
+}
+
+.full-page-link h2 {
+    margin-left: 1rem;
+}
+
+.back-button {
+    position: absolute;
+    right: 1em;
+    padding: 1em;
+    background-color: red;
+}
+
+.rain .back-button {
+    background-color: green;
+}
+
+a {
+    color: white;
+}
+
+header {
+    padding: 1em;
+    display: flex;
+    align-items: center;
+}
+
+h1 {
+    font-size: 3em;
+    margin: 0;
+}
+
+nav .knoppen {
+    padding: 1em;
+    width: 100vw;
+    height: 80vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: auto;
+    gap: 3em;
+    list-style-type: none;
+}
+
+nav .knoppen a {
+    background-color: rgb(47, 47, 47);
+    font-size: 3em;
+    display: grid;
+    place-items: center;
+    height: 100%;
+
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    height: 50vh;
+    width: 100%;
+}
+
+main>section {
+    text-align: center;
+    font-size: 2em;
+    width: 30%;
+    display: grid;
+    place-items: center;
+}
+
+main {
+    overflow-y: scroll;
+}
+
+.tijd {
+    padding: 2em;
+}
+
+.tijd div {
+
+    position: fixed;
+    pointer-events: none;
+
+}
+
+.tijd h2,
+.tijd p {
+    font-size: 1em;
+    margin: 0;
+}
