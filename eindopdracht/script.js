@@ -203,8 +203,8 @@ const timeSection = document.querySelector('.tijd')
 const main = document.querySelector('main')
 console.log(timeSection);
 if (screen.width < 400) {
+    timeSection.style.height = '1000px'
 }
-timeSection.style.height = '1000px'
 
 function handleTimeScroll(e) {
     let totalSrollHeight = main.scrollHeight - main.offsetHeight
