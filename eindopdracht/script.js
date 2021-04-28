@@ -217,16 +217,3 @@ function handleTimeScroll(e) {
 }
 
 main.addEventListener("scroll", handleTimeScroll)
-
-
-let audiosWeWantToUnlock = [rainAudio, dryAudio]
-document.body.addEventListener('touchstart', function () {
-    if (audiosWeWantToUnlock) {
-        for (let audio of audiosWeWantToUnlock) {
-            audio.play()
-            audio.pause()
-            audio.currentTime = 0
-        }
-        audiosWeWantToUnlock = null
-    }
-}, false)
