@@ -1,6 +1,6 @@
 # Human Centered Design
 
-[LIVE LINK](https://samslotemaker.github.io/human-centered-design-2021/concept)
+[LIVE LINK](https://samslotemaker.github.io/human-centered-design-2021/eindopdracht)
 
 ## :memo:Table of Contents
 * [Beschrijving](https://github.com/SamSlotemaker/human-centered-design-2021#clipboardbeschrijving)
